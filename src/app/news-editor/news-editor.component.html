@@ -1,0 +1,27 @@
+<label>
+  Tytul:
+  <input
+    type="text"
+    [(ngModel)]="createdTitle"
+    placeholder="Title - required"
+  />
+</label>
+<label>
+  Link obrazka:
+  <input
+    type="url"
+    [(ngModel)]="createdImgUrl"
+    placeholder="Image url - optional"
+  />
+</label>
+<label>
+  Treść:
+  <textarea
+    [(ngModel)]="createdContent"
+    placeholder="News text ... - required"
+  ></textarea>
+</label>
+
+<button (click)="addNews()" [disabled]="!createdTitle || !createdContent">
+  dodaj
+</button>

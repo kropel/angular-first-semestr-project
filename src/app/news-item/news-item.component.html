@@ -1,0 +1,16 @@
+<div [className]="index % 2 === 0 ? 'news-item odd' : 'news-item even'">
+  <h2>
+    <small>id: {{ news.id }}</small> {{ news.title }}
+  </h2>
+  <img [src]="news.imageUrl" />
+  <p>{{ news.content }}</p>
+  <div [className]="'ranking'">
+    <p><small>Punktów: </small>{{ news.votes }}</p>
+    <button (click)="vouteUp()">+</button>
+    <button (click)="vouteDown()">-</button>
+  </div>
+  <button (click)="remove()">
+    usun
+  </button>
+  <div class="clear"></div>
+</div>

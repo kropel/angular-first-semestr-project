@@ -1,0 +1,10 @@
+<app-news-item
+  [news]="it"
+  [index]="i"
+  *ngFor="let it of news | sortByVote; let i = index"
+>
+</app-news-item>
+
+<!-- <div *ngIf="news.length > 5">
+    <button>wiecej</button>
+</div> -->
